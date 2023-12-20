@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "compras",
+  "info": {
+    "singularName": "compra",
+    "pluralName": "compras",
+    "displayName": "Compra",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "fecha": {
+      "type": "datetime"
+    },
+    "cantidadProductos": {
+      "type": "integer"
+    },
+    "monto": {
+      "type": "float"
+    },
+    "productosComprados": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::funko.funko"
+    },
+    "estado_compra": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::estado-compra.estado-compra"
+    }
+  }
+}

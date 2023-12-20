@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "funkos",
+  "info": {
+    "singularName": "funko",
+    "pluralName": "funkos",
+    "displayName": "funko",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "precio": {
+      "type": "decimal"
+    },
+    "cuotas": {
+      "type": "integer"
+    },
+    "cantidad": {
+      "type": "integer"
+    },
+    "tag1": {
+      "type": "string"
+    },
+    "tag2": {
+      "type": "string"
+    },
+    "imagen": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "mappedBy": "funkos"
+    }
+  }
+}
